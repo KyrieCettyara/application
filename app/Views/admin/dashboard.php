@@ -11,3 +11,5 @@
         </div>
     </div>
 </div>
+
+<a href="<?= base_url('ArtikelController/addArtikel') ?>" class="get-started-btn">Logout</a>

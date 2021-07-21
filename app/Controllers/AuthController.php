@@ -44,7 +44,7 @@ class AuthController extends BaseController
                 if ($user['role_id'] == 1) {
                     return redirect()->to(base_url('admin'));
                 } elseif ($user['role_id'] == 2) {
-                    return redirect()->to(base_url('landing_page'));
+                    return redirect()->to(base_url('/'));
                 }
             }
         }

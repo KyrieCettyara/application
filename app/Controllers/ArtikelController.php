@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ArtikelModel;
 use App\Models\BookmarkModel;
+use App\Models\JenisArtikelModel;
 
 class ArtikelController extends BaseController
 {
@@ -30,10 +31,17 @@ class ArtikelController extends BaseController
 
         $value = $kulinerModel->where('id_artikel', $key)->first();
         $this->setArtikelSession($value);
+        if (session()->get('role_id') == 1) {
 
-        return view('byId', [
-            "value" => $value,
-        ]);
+            return view('admin/detail', [
+                "value" => $value,
+            ]);
+        } else {
+
+            return view('byId', [
+                "value" => $value,
+            ]);
+        }
     }
 
     private function setArtikelSession($value)
@@ -60,6 +68,85 @@ class ArtikelController extends BaseController
         ];
 
         $bookmarkModel->save($data);
+        session()->destroy();
         return view('landing_page', $data);
+    }
+
+    public function addArtikel()
+    {
+        $data['title'] = 'Tambah Artikel';
+        $model = new JenisArtikelModel();
+
+        $data = $model->findAll();
+
+        if ($this->request->getMethod() == 'post') {
+
+            $model = new ArtikelModel();
+
+            $newData = [
+                'id_jenis_artikel' => $this->request->getVar('id_jenis_artikel'),
+                'gambar' => $this->request->getVar('gambar'),
+                'judul_artikel' => $this->request->getVar('judul_artikel'),
+                'isi_artikel' => $this->request->getVar('isi_artikel'),
+
+            ];
+
+            $model->save($newData);
+            $session = session();
+            $session->setFlashdata('success', 'Successful Registration');
+            return redirect()->to(base_url('admin'));
+        }
+
+
+        return view('admin/add_artikel', [
+            "data" => $data,
+        ]);
+    }
+
+    public function editArtikel($id = null)
+    {
+        $data['title'] = 'Tambah Artikel';
+        $model = new JenisArtikelModel();
+        $modelArtikel = new ArtikelModel();
+
+
+        $data = $model->findAll();
+        $modelId = $modelArtikel->where("id_artikel", $id)->first();
+
+        if ($this->request->getMethod() == "post") {
+
+            $newData = [
+                'id_jenis_artikel' => $this->request->getVar('id_jenis_artikel'),
+                'gambar' => $this->request->getVar('gambar'),
+                'judul_artikel' => $this->request->getVar('judul_artikel'),
+                'isi_artikel' => $this->request->getVar('isi_artikel'),
+
+            ];
+
+            $modelArtikel->update($id, $newData);
+
+            $session = session();
+            $session->setFlashdata("success", "Data updated successfully");
+            return redirect()->to(base_url('kuliner/7'));
+        }
+
+
+        return view('admin/edit_artikel', [
+            "modelId" => $modelId,
+            "data" => $data,
+        ]);
+    }
+
+    public function deleteArtikel($id)
+    {
+        $model = new ArtikelModel();
+
+        $artikel = $model->delete($id);
+
+        $session = session();
+
+        $session->setFlashdata("success", "Artikel Berhasil Dihapus");
+
+        return redirect()->to(base_url('admin'));
     }
 }

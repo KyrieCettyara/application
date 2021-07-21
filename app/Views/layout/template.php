@@ -78,11 +78,21 @@
 
                 </div>
                 <div class="Hotbg">
-                    <input type="text" name="input" class="Hotbg-txt" placeholder="Search >>>">
-                    <a href="<?php echo base_url('Home/search'); ?>?cari=sabun" class="Hotbg-btn">
+                    <input onchange="ganti()" id="search" type="text" name="input" class="Hotbg-txt" placeholder="Search >>>">
+                    <a id="searchb" href="" class="Hotbg-btn">
                         <i class="fa fa-search"></i>
                     </a>
                 </div>
+
+                <script>
+                    function ganti() {
+                        let searchin = document.getElementById("search");
+                        let searchButton = document.getElementById("searchb");
+                        let baseURL = "<?php echo base_url('Home/search'); ?>";
+                        let link = baseURL + "?cari=" + searchin.value;
+                        searchButton.href = link;
+                    }
+                </script>
 
             </div>
     </header><!-- End Header -->
