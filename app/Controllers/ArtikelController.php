@@ -89,6 +89,8 @@ class ArtikelController extends BaseController
                 $imageName = $file->getRandomName();
                 $file->move('upload/', $imageName);
             }
+
+
             $newData = [
                 'id_jenis_artikel' => $this->request->getVar('id_jenis_artikel'),
                 'gambar' => $imageName,
@@ -121,9 +123,17 @@ class ArtikelController extends BaseController
 
         if ($this->request->getMethod() == "post") {
 
+            $file = $this->request->getFile('gambar');
+
+            if ($file->isValid() && !$file->hasMoved()) {
+                $imageName = $file->getRandomName();
+                $file->move('upload/', $imageName);
+            }
+
+
             $newData = [
                 'id_jenis_artikel' => $this->request->getVar('id_jenis_artikel'),
-                'gambar' => $this->request->getVar('gambar'),
+                'gambar' => $imageName,
                 'judul_artikel' => $this->request->getVar('judul_artikel'),
                 'isi_artikel' => $this->request->getVar('isi_artikel'),
 
@@ -133,7 +143,7 @@ class ArtikelController extends BaseController
 
             $session = session();
             $session->setFlashdata("success", "Data updated successfully");
-            return redirect()->to(base_url('kuliner/7'));
+            return redirect()->to(base_url('admin'));
         }
 
 

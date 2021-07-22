@@ -11,7 +11,7 @@
             <div class="card">
                 <?php $image = $value['gambar']; ?>
 
-                <img id="gambar" src="<?php echo base_url("upload/$image"); ?> " alt="image" />
+                <img id="gambar" src="<?php echo base_url("upload/$image"); ?> " />
 
 
                 <div class=" card-body">

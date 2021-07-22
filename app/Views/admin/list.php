@@ -2,6 +2,8 @@
 
 <?= $this->section('content'); ?>
 
+<a href=" <?= base_url('add-artikel'); ?>" class="btn btn-primary">Tambah Artikel</a>
+
 <?php foreach ($data as $value) : ?>
     <?php
     $isi_artikel = $value['isi_artikel'];
