@@ -4,9 +4,11 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\UserModel;
+use App\Models\ArtikelModel;
 
 class AdminController extends BaseController
 {
+
 
     public function __construct()
     {
@@ -14,11 +16,18 @@ class AdminController extends BaseController
             echo 'Access denied';
             exit;
         }
+        helper('text');
     }
     public function index()
     {
+        $model = new ArtikelModel();
         $data['title'] = 'Admin';
-        return view("admin/dashboard");
+
+        $data = $model->findAll();
+
+        return view('admin/list', [
+            "data" => $data,
+        ]);
     }
 
 

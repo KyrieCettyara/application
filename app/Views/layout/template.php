@@ -36,18 +36,9 @@
     <script src="<?php echo base_url('vendor/aos/aos.js'); ?> "></script>
 
     <!-- Template Main JS File -->
-    <script src="<?php echo base_url('js/main.js'); ?> "></script>
+    <script type="text/javascript" src="<?php echo base_url('js/main.js'); ?> "></script>
 
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $.get("date-time.php", function(data) {
-                    // Display the returned data in browser
-                    $("#result").html(data);
-                });
-            });
-        });
-    </script>
+
 </head>
 
 <body>

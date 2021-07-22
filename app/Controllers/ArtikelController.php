@@ -25,11 +25,11 @@ class ArtikelController extends BaseController
         ]);
     }
 
-    public function kulinerById($key = null)
+    public function artikelById($key = null)
     {
-        $kulinerModel = new ArtikelModel();
+        $artikelModel = new ArtikelModel();
 
-        $value = $kulinerModel->where('id_artikel', $key)->first();
+        $value = $artikelModel->where('id_artikel', $key)->first();
         $this->setArtikelSession($value);
         if (session()->get('role_id') == 1) {
 
@@ -83,9 +83,15 @@ class ArtikelController extends BaseController
 
             $model = new ArtikelModel();
 
+            $file = $this->request->getFile('gambar');
+
+            if ($file->isValid() && !$file->hasMoved()) {
+                $imageName = $file->getRandomName();
+                $file->move('upload/', $imageName);
+            }
             $newData = [
                 'id_jenis_artikel' => $this->request->getVar('id_jenis_artikel'),
-                'gambar' => $this->request->getVar('gambar'),
+                'gambar' => $imageName,
                 'judul_artikel' => $this->request->getVar('judul_artikel'),
                 'isi_artikel' => $this->request->getVar('isi_artikel'),
 

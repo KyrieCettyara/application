@@ -48,7 +48,7 @@ $routes->group("user", ["filter" => "auth"], function ($routes) {
 $routes->get('logout', ' UserController::logout');
 
 $routes->get('list-kuliner', "ArtikelController::listKuliner");
-$routes->get("kuliner/(:num)", "ArtikelController::kulinerById/$1");
+$routes->get("artikel/(:num)", "ArtikelController::artikelById/$1");
 $routes->match(["get", "post"], "add-artikel", "ArtikelController::addArtikel");
 $routes->match(["get", "post"], "edit-artikel/(:num)", "ArtikelController::editArtikel/$1");
 $routes->get("delete-artikel/(:num)", "ArtikelController::deleteArtikel/$1");
