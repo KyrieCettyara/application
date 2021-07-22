@@ -10,8 +10,8 @@ class AuthController extends BaseController
 
     public function login()
     {
-        $data = [];
-        $tittle['title'] = 'Login';
+
+        $data['title'] = 'Login';
 
         if ($this->request->getMethod() == 'post') {
 
@@ -27,11 +27,11 @@ class AuthController extends BaseController
             ];
 
             if (!$this->validate($rules, $errors)) {
-                return view(
-                    'landing_page',
-                    $tittle,
-                    ["validation" => $this->validator],
-                );
+                return view('landing_page', [
+                    "validation" => $this->validator,
+                    "data" => $data,
+
+                ]);
             } else {
                 $model = new UserModel();
 
@@ -48,7 +48,9 @@ class AuthController extends BaseController
                 }
             }
         }
-        return view('auth/login', $tittle);
+        return view('auth/login', [
+            "data" => $data,
+        ]);
     }
 
     private function setUserSession($user)
@@ -76,14 +78,15 @@ class AuthController extends BaseController
         $session->remove('isLoggedIn');
         $session->destroy();
 
-        return view('landing_page', $data);
+        return view('landing_page', [
+            "data" => $data,
+        ]);
     }
 
 
     public function register()
     {
-        $data = [];
-        $tittle['title'] = 'Register';
+        $data['title'] = 'Register';
 
         if ($this->request->getMethod() == 'post') {
             //let's do the validation here
@@ -116,7 +119,9 @@ class AuthController extends BaseController
                 return redirect()->to(base_url('login'));
             }
         }
-        return view('auth/register', $tittle);
+        return view('auth/register', [
+            "data" => $data,
+        ]);
     }
 
     public function profile()

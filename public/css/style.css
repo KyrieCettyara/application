@@ -1728,3 +1728,17 @@ section {
   width: 0px;
   font-weight: bold;
 }
+
+.container {
+  margin: 15px 0px 15px 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gambar {
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

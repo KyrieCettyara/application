@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $title; ?>
+    <title><?= $data['title']; ?>
     </title>
 
     <!-- Custom fonts for this template-->

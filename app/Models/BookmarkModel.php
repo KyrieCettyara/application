@@ -41,4 +41,11 @@ class BookmarkModel extends Model
     protected $afterFind            = [];
     protected $beforeDelete         = [];
     protected $afterDelete          = [];
+
+    public function getBookmark()
+    {
+        return $this->db->table('bookmark')
+            ->join('artikel', 'artikel.id_artikel = bookmark.id_artikel')
+            ->get()->getResultArray();
+    }
 }

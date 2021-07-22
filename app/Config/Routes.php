@@ -48,6 +48,9 @@ $routes->group("user", ["filter" => "auth"], function ($routes) {
 $routes->get('logout', ' UserController::logout');
 
 $routes->get('list-kuliner', "ArtikelController::listKuliner");
+$routes->get('list-pariwisata', "ArtikelController::listPariwisata");
+$routes->get('list-travel', "ArtikelController::listTravel");
+$routes->get('list-oleh-oleh', "ArtikelController::listOleh");
 $routes->get("artikel/(:num)", "ArtikelController::artikelById/$1");
 $routes->match(["get", "post"], "add-artikel", "ArtikelController::addArtikel");
 $routes->match(["get", "post"], "edit-artikel/(:num)", "ArtikelController::editArtikel/$1");

@@ -17,11 +17,53 @@ class ArtikelController extends BaseController
 
     public function listKuliner()
     {
+        $data['title'] = 'Sistem Informasi Tapanuli Utara';
         $kulinerModel = new ArtikelModel();
 
         $allValue = $kulinerModel->where('id_jenis_artikel', 1)->findAll();
+
         return view('list', [
             "allValue" => $allValue,
+            "data" => $data,
+        ]);
+    }
+
+    public function listPariwisata()
+    {
+        $data['title'] = 'Sistem Informasi Tapanuli Utara';
+        $kulinerModel = new ArtikelModel();
+
+        $allValue = $kulinerModel->where('id_jenis_artikel', 3)->findAll();
+
+        return view('list', [
+            "allValue" => $allValue,
+            "data" => $data,
+        ]);
+    }
+
+    public function listTravel()
+    {
+        $data['title'] = 'Sistem Informasi Tapanuli Utara';
+        $kulinerModel = new ArtikelModel();
+
+        $allValue = $kulinerModel->where('id_jenis_artikel', 2)->findAll();
+
+        return view('list', [
+            "allValue" => $allValue,
+            "data" => $data,
+        ]);
+    }
+
+    public function listOleh()
+    {
+        $data['title'] = 'Sistem Informasi Tapanuli Utara';
+        $kulinerModel = new ArtikelModel();
+
+        $allValue = $kulinerModel->where('id_jenis_artikel', 3)->findAll();
+
+        return view('list', [
+            "allValue" => $allValue,
+            "data" => $data,
         ]);
     }
 

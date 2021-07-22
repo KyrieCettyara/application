@@ -9,7 +9,9 @@ class Home extends BaseController
 	public function index()
 	{
 		$data['title'] = 'Sistem Informasi Tapanuli Utara';
-		return view('landing_page', $data);
+		return view('landing_page', [
+			"data" => $data,
+		]);
 	}
 
 	public function search()
