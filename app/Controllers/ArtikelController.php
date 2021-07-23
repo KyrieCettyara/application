@@ -59,7 +59,7 @@ class ArtikelController extends BaseController
         $data['title'] = 'Sistem Informasi Tapanuli Utara';
         $kulinerModel = new ArtikelModel();
 
-        $allValue = $kulinerModel->where('id_jenis_artikel', 3)->findAll();
+        $allValue = $kulinerModel->where('id_jenis_artikel', 4)->findAll();
 
         return view('list', [
             "allValue" => $allValue,
@@ -69,6 +69,7 @@ class ArtikelController extends BaseController
 
     public function artikelById($key = null)
     {
+        $data['title'] = 'Sistem Informasi Tapanuli Utara';
         $artikelModel = new ArtikelModel();
 
         $value = $artikelModel->where('id_artikel', $key)->first();
@@ -82,11 +83,12 @@ class ArtikelController extends BaseController
 
             return view('byId', [
                 "value" => $value,
+                "data" => $data,
             ]);
         }
     }
 
-    private function setArtikelSession($value)
+    public function setArtikelSession($value)
     {
         $data = [
             'id_user' => 13,
@@ -101,17 +103,18 @@ class ArtikelController extends BaseController
 
     public function bookmark()
     {
+        $data['title'] = 'Sistem Informasi Tapanuli Utara';
         $bookmarkModel = new BookmarkModel();
 
-        $data = [
+        $allValue = [
             'title' =>  'Sistem Informasi Tapanuli Utara',
             'id_user' => session()->get('id_user'),
             'id_artikel' => session()->get('id_artikel'),
         ];
 
-        $bookmarkModel->save($data);
-        session()->destroy();
-        return view('landing_page', $data);
+        $bookmarkModel->save($allValue);
+
+        return redirect()->to(base_url('bookmark'));
     }
 
     public function addArtikel()

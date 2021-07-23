@@ -5,7 +5,13 @@
 
     <meta content="" name="description">
     <meta content="" name="keywords">
+
+
     <title><?= $data['title'] ?></title>
+
+
+
+
     <!-- Favicons -->
     <link href=" <?php echo base_url('img/favicon.png'); ?> " rel="icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -33,7 +39,7 @@
 <body>
 
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top ">
+    <header id="header" class="position-relative ">
         <div class="container-fluid">
 
             <div class="row justify-content-center">
@@ -44,13 +50,12 @@
 
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
-                            <li><a class="scrollto" href="hotel1.html">Hotel</a></li>
                             <li><a class="scrollto " href="<?php echo base_url('list-pariwisata'); ?>">Pariwisata</a></li>
                             <li><a class="scrollto" href="<?php echo base_url('list-kuliner'); ?>">Kuliner</a></li>
                             <li><a class="scrollto" href="<?php echo base_url('list-travel'); ?>">Travel</a></li>
                             <li><a class="scrollto" href="<?php echo base_url('list-oleh-oleh'); ?>">Oleh Oleh</a></li>
                             <li><?php if (session()->get('role_id') == 2) : ?>
-                                    <a href="<?= base_url('AuthController/logout') ?>" class="get-started-btn">Bookmark</a>
+                                    <a href="<?= base_url('bookmark') ?>" class="scrollto">Bookmark</a>
                                 <?php endif ?>
                             </li>
                         </ul>

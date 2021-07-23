@@ -129,11 +129,28 @@ input.src {
 
 .container {
   margin: 15px 0px 15px 0px;
-}
-
-#gambar {
-  width: 400px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#gambar {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card > .card-body {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.card > .card-body > .btn {
+  float: right;
+  border-radius: 25px;
+  background-color: #009961;
 }

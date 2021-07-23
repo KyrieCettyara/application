@@ -78,9 +78,7 @@ class AuthController extends BaseController
         $session->remove('isLoggedIn');
         $session->destroy();
 
-        return view('landing_page', [
-            "data" => $data,
-        ]);
+        return redirect()->to(base_url('/'));
     }
 
 

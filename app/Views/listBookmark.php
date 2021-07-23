@@ -15,9 +15,9 @@
                         <img id="gambar" class="card-img-top" src="<?= "upload/" . $value['gambar']; ?>" alt="image" />
 
                         <div class=" card-body">
-                            <h4 class="card-title"><?= $value['judul_artikel']; ?></h4>
+                            <h5 class="card-title"><?= $value['judul_artikel']; ?></h5>
                             <p class="card-text"><?= $isi_artikel; ?></p>
-                            <a href="<?= base_url('artikel/' . $value['id_artikel']); ?>" class="btn btn-primary">Baca Artikel...</a>
+                            <a href="<?= base_url('bookmark/' . $value['id_bookmark']); ?>" class="btn btn-primary">Baca Artikel...</a>
                         </div>
                     </div>
                 </div>
@@ -30,9 +30,7 @@
             <div class="col">
                 <div class="card">
                     <div class=" card-body" style="height: 300px;">
-                        <h5>Maaf, belum terdapat artikel.</h5>
-
-
+                        <h5>Anda tidak memiliki bookmark.</h5>
                     </div>
                 </div>
 

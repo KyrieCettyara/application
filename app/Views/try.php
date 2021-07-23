@@ -1,14 +1,5 @@
-<?= $this->extend('admin/side_menu'); ?>
+<?php foreach ($allValue as $value) : ?>
 
-<?= $this->section('content'); ?>
-
-<a href=" <?= base_url('add-artikel'); ?>" class="btn btn-primary">Tambah Artikel</a>
-
-<?php foreach ($data as $value) : ?>
-    <?php
-    $isi_artikel = $value['isi_artikel'];
-    $isi_artikel = character_limiter($isi_artikel, 500);
-    ?>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -17,7 +8,7 @@
 
                     <div class=" card-body">
                         <h5 class="card-title"><?= $value['judul_artikel']; ?></h5>
-                        <p class="card-text"><?= $isi_artikel; ?></p>
+                        <p class="card-text"><?= $value['isi_artikel'] ?></p>
                         <a href="<?= base_url('artikel/' . $value['id_artikel']); ?>" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
@@ -25,4 +16,4 @@
         </div>
     </div>
 <?php endforeach; ?>
-<?= $this->endSection(); ?>
+<?= $key['key']; ?>
