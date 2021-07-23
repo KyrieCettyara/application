@@ -18,7 +18,7 @@
                     <div class=" card-body">
                         <h5 class="card-title"><?= $value['judul_artikel']; ?></h5>
                         <p class="card-text"><?= $isi_artikel; ?></p>
-                        <a href="<?= base_url('artikel/' . $value['id_artikel']); ?>" class="btn btn-primary">Go somewhere</a>
+                        <a href="<?= base_url('artikel/' . $value['id_artikel']); ?>" class="btn btn-primary">Baca Artikel...</a>
                     </div>
                 </div>
             </div>
