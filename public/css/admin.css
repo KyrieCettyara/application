@@ -135,10 +135,7 @@ input.src {
 }
 
 #gambar {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  object-position: center;
+  width: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -150,6 +147,28 @@ input.src {
 }
 
 .card > .card-body > .btn {
+  float: right;
+  border-radius: 25px;
+  background-color: #009961;
+}
+
+.row > .coll {
+  display: flex;
+  justify-content: center;
+}
+
+.row > .coll > .detail {
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: "Poppins", sans-serif;
+  width: 75%;
+}
+.row > .coll > .detail > .title {
+  padding-top: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.row > .coll > .btn {
   float: right;
   border-radius: 25px;
   background-color: #009961;

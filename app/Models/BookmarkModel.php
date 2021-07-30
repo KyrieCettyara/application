@@ -57,4 +57,12 @@ class BookmarkModel extends Model
             ->where('id_bookmark', $key)
             ->get()->getResultArray();
     }
+
+    public function bookmarkCheck($id_user, $id_artikel)
+    {
+        return $this->db->table('bookmark')
+            ->where('id_user', $id_user)
+            ->where('id_artikel', $id_artikel)
+            ->get()->getRowArray(1);
+    }
 }

@@ -81,10 +81,37 @@ class ArtikelController extends BaseController
             ]);
         } else {
 
+            $this->bookmarkIsExist($key);
+
             return view('byId', [
                 "value" => $value,
                 "data" => $data,
             ]);
+        }
+    }
+
+    private function bookmarkIsExist($id_artikel)
+    {
+        $model = new BookmarkModel();
+        $id_user = session()->get('id_user');
+
+        $value = $model->bookmarkCheck($id_user, $id_artikel);
+
+        if ($value == null) {
+            $data = [
+
+                'isExist' => false,
+
+            ];
+            session()->set($data);
+        } else {
+            $data = [
+
+                'isExist' => true,
+                'id_bookmark' => $value['id_bookmark']
+
+            ];
+            session()->set($data);
         }
     }
 
@@ -114,7 +141,7 @@ class ArtikelController extends BaseController
 
         $bookmarkModel->save($allValue);
 
-        return redirect()->to(base_url('bookmark'));
+        return redirect()->back();
     }
 
     public function addArtikel()

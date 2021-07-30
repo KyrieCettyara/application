@@ -50,25 +50,27 @@ class UserController extends BaseController
 
         $allValue = $model->getBookmark($key);
 
-        return view('listBookmark', [
+        return view('list', [
             "allValue" => $allValue,
             "data" => $data,
         ]);
     }
+
+
 
     public function bookmarkById($key = null)
     {
         $data['title'] = 'Sistem Informasi Tapanuli Utara';
         $model = new BookmarkModel();
 
-
         $allValue = $model->getBookmarkDetail($key);
-
         return view('bookmarkDetail', [
             "allValue" => $allValue,
             "data" => $data,
         ]);
     }
+
+
 
     public function deleteBookmark($id)
     {
@@ -80,6 +82,6 @@ class UserController extends BaseController
 
         $session->setFlashdata("success", "Artikel Berhasil Dihapus");
 
-        return redirect()->to(base_url('bookmark'));
+        return redirect()->back();
     }
 }
