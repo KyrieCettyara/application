@@ -23,8 +23,7 @@
             <div class="container">
 
                 <div class="heading-section mb-4 text-center">
-                    <span class="subheading">Tentang</span>
-                    <h2 class="mb-4">Tapanuli Utara</h2>
+                    <h2 class="mb-4">Tentang Tapanuli Utara</h2>
                 </div>
                 Kabupaten Tapanuli Utara adalah sebuah kabupaten di provinsi Sumatra Utara, Indonesia yang ibukotanya berada di Tarutung. Jumlah penduduk<br> kabupaten Tapanuli Utara ditahun 2018 sebanyak 299.881 jiwa, dengan kepadatan penduduk 79,05 jiwa/km2 dan kabupaten <br>ini merupakan kawasan yang mayoritas penduduknya adalah etnis atau suku Batak Toba.
             </div>
@@ -35,7 +34,7 @@
     <section id="services" class="services">
         <div class="container">
             <div class="heading-section mb-4 text-center">
-                <span class="subheading">Layanan</span>
+
                 <h2 class="mb-4">Informasi</h2>
             </div>
         </div>
@@ -138,7 +137,7 @@
                 <center>
                     <h2>Preview</h2>
                 </center>
-                <p>Disini kami menyediakan informasi sementara yang bisa anda lihat sebelum langsung masuk ke page yang spesifik ke masing-masing kategori yang telah kami sediakan</p>
+
             </div>
 
             <div class="row">
@@ -297,9 +296,8 @@
 
             <div class="section-title">
                 <center>
-                    <h2>Kontak</h2>
+                    <h2>Informasi Kontak</h2>
                 </center>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
             </div>
         </div>
 

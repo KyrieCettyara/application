@@ -13,7 +13,7 @@
 
 
     <!-- Favicons -->
-    <link href=" <?php echo base_url('img/favicon.png'); ?> " rel="icon">
+    <link href=" <?php echo base_url('img/icon.png'); ?> " rel="icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
 
@@ -94,11 +94,11 @@
             <h3>Diskominfo Tapanuli Utara</h3>
             <p>Dinas Komunikasi dan Informatika Tapanuli Utara</p>
             <div class="social-links">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook-circle"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram-alt"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin-square"></i></a>
+
+                <a href="https://www.facebook.com/diskominfo.taput" class="facebook"><i class="bx bxl-facebook-circle"></i></a>
+                <a href="https://www.instagram.com/diskominfo.taput/" class="instagram"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="https://www.youtube.com/channel/UCFybW7LTxdWptQ0Vus-cuYw" class="youtube"><i class="bx bxl-youtube"></i></a>
+
             </div>
             <div class="copyright">
                 &copy; Copyright <strong><span>Diskominfo Tapanuli Utara <?= date('Y'); ?></span></strong>.
