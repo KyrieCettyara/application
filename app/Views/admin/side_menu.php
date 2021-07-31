@@ -10,6 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="<?php echo base_url('css/admin.css'); ?> " rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
 </head>
 
@@ -21,17 +24,14 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="<?= base_url('admin') ?>"><i class="fa fa-server" aria-hidden="true"></i><span class="text"> Kelola Artikel </span></a></li>
-                    <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i><span class="text"> Kelola Akun Admin </span></a></li>
+                    <li><a href="<?= base_url('admin') ?>"><i class="fa fa-server" aria-hidden="true"></i><span class="text"> Artikel </span></a></li>
                     <li><a href="<?= base_url('AuthController/logout') ?>"><i class="fa fa-sign-out" aria-hidden="true"></i><span class="text"> Keluar</span></a></li>
 
                 </ul>
             </div>
         </div>
         <div class="main-content">
-            <div class="topmenu">
-                <div class="search"><i class="fa fa-search" aria-hidden="true"></i> <input type='text' class='src' placeholder='Search for cards...' /></div>
-            </div>
+
             <div class="main-section">
 
                 <?= $this->renderSection('content'); ?>

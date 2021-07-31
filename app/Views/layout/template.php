@@ -88,6 +88,7 @@
     </header><!-- End Header -->
 
     <?= $this->renderSection('content'); ?>
+
     <!--=======Footer=======-->
     <footer id="footer">
         <div class="container">

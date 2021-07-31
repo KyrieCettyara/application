@@ -2,8 +2,14 @@
 
 <?= $this->section('content'); ?>
 
-<a href=" <?= base_url('add-artikel'); ?>" class="btn btn-primary">Tambah Artikel</a>
 
+
+<div class="container">
+    <div class="butn">
+        <a href=" <?= base_url('add-artikel'); ?>" class="btn" id="btn">Tambah Artikel</a>
+
+    </div>
+</div>
 <?php foreach ($data as $value) : ?>
     <?php
     $isi_artikel = $value['isi_artikel'];
@@ -18,7 +24,7 @@
                     <div class=" card-body">
                         <h5 class="card-title"><?= $value['judul_artikel']; ?></h5>
                         <p class="card-text"><?= $isi_artikel; ?></p>
-                        <a href="<?= base_url('artikel/' . $value['id_artikel']); ?>" class="btn btn-primary">Baca Artikel...</a>
+                        <a href="<?= base_url('artikel/' . $value['id_artikel']); ?>" class="btn">Baca Artikel...</a>
                     </div>
                 </div>
             </div>

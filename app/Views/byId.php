@@ -8,7 +8,7 @@
             <div class="detail">
                 <?php $image = $value['gambar']; ?>
 
-                <img id="gambar" src="<?php echo base_url("upload/$image"); ?> " />
+                <img id="gambars" src="<?php echo base_url("upload/$image"); ?> " />
 
                 <?php if (session()->get('isLoggedIn')) : ?>
                     <?php if (session()->get('isExist')) : ?>

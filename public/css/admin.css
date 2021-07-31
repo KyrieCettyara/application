@@ -40,7 +40,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #e1e2fa;
+  color: #fff;
 }
 .menu ul {
   list-style-type: none;
@@ -68,7 +68,6 @@ a {
 }
 
 .main-section {
-  background: #f6f9fc;
   height: 100%;
   margin-bottom: -5000px; /* any large number will do */
   padding-bottom: 5000px;
@@ -135,41 +134,86 @@ input.src {
 }
 
 #gambar {
-  width: 50%;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.detail > #gambar {
+  width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.card {
+  width: 100%;
 }
 
 .card > .card-body {
   text-align: justify;
   text-justify: inter-word;
+  font-family: "Poppins", sans-serif;
+}
+
+.card > .card-body > .card-title {
+  font-family: "Poppins", sans-serif;
 }
 
 .card > .card-body > .btn {
   float: right;
   border-radius: 25px;
-  background-color: #009961;
+  background-color: #32325d;
 }
 
-.row > .coll {
+.row > .col {
   display: flex;
   justify-content: center;
 }
 
-.row > .coll > .detail {
+.row > .col > .detail {
   text-align: justify;
   text-justify: inter-word;
   font-family: "Poppins", sans-serif;
   width: 75%;
 }
-.row > .coll > .detail > .title {
+
+.row > .col > .detail > .title {
   padding-top: 15px;
   font-family: "Poppins", sans-serif;
 }
 
-.row > .coll > .btn {
+/* .row > .coll > .detail > a {
+  padding-top: 10px;
   float: right;
-  border-radius: 25px;
-  background-color: #009961;
+} */
+
+h4,
+h3 {
+  font-weight: bold;
+}
+
+.container > .buttn > #btn {
+  border-radius: 20px;
+  width: 100px;
+  margin: 0px 5px 15px;
+  background-color: #32325d;
+  font-family: "Poppins", sans-serif;
+}
+.container > .butn > #btn {
+  border-radius: 20px;
+  margin: 0px 5px 15px;
+  background-color: #32325d;
+  font-family: "Poppins", sans-serif;
+}
+
+/* .row {
+  float: right;
+} */
+.container > .buttn {
+  display: flex;
+}
+
+.panel-body {
+  width: 100%;
 }

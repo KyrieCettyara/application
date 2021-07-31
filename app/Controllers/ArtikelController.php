@@ -192,16 +192,18 @@ class ArtikelController extends BaseController
 
         $data = $model->findAll();
         $modelId = $modelArtikel->where("id_artikel", $id)->first();
+        $imageName = $modelId['gambar'];
 
         if ($this->request->getMethod() == "post") {
 
             $file = $this->request->getFile('gambar');
 
-            if ($file->isValid() && !$file->hasMoved()) {
-                $imageName = $file->getRandomName();
-                $file->move('upload/', $imageName);
+            if ($file != null) {
+                if ($file->isValid() && !$file->hasMoved()) {
+                    $imageName = $file->getRandomName();
+                    $file->move('upload/', $imageName);
+                }
             }
-
 
             $newData = [
                 'id_jenis_artikel' => $this->request->getVar('id_jenis_artikel'),
