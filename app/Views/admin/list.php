@@ -2,11 +2,9 @@
 
 <?= $this->section('content'); ?>
 
-
-
 <div class="container">
     <div class="butn">
-        <a href=" <?= base_url('add-artikel'); ?>" class="btn" id="btn">Tambah Artikel</a>
+        <a href=" <?= base_url('add-artikel'); ?>" class="btn btn-primary" id="btn">Tambah Artikel</a>
 
     </div>
 </div>
@@ -24,7 +22,7 @@
                     <div class=" card-body">
                         <h5 class="card-title"><?= $value['judul_artikel']; ?></h5>
                         <p class="card-text"><?= $isi_artikel; ?></p>
-                        <a href="<?= base_url('artikel/' . $value['id_artikel']); ?>" class="btn">Baca Artikel...</a>
+                        <a href="<?= base_url('artikel/' . $value['id_artikel']); ?>" class="btn btn-primary">Baca Artikel...</a>
                     </div>
                 </div>
             </div>

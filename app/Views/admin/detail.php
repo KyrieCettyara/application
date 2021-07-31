@@ -4,8 +4,8 @@
 
 <div class="container">
     <div class="buttn">
-        <a href=" <?= base_url('edit-artikel/' . $value['id_artikel']); ?>" class="btn" id="btn">Edit</a>
-        <a href="<?= base_url('delete-artikel/' . $value['id_artikel']); ?>" class="btn" id="btn">Delete</a>
+        <a href=" <?= base_url('edit-artikel/' . $value['id_artikel']); ?>" class="btn btn-primary" id="btn">Edit</a>
+        <a href="<?= base_url('delete-artikel/' . $value['id_artikel']); ?>" class="btn btn-primary" id="btn">Delete</a>
 
     </div>
 </div>
