@@ -41,51 +41,59 @@
 
         <div class="row">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                    <center>
-                        <div class="icon"><i class="bx bx-world"></i></div>
-                    </center>
-                    <center>
-                        <h4 class="description">Tour & Travel</h4>
-                        <p class="description">Kami menyediakan informasi tentang Tour & Travel yang mungkin anda sukai dan ingin kunjungi</p>
-                    </center>
-                </div>
+                <a href="<?php echo base_url('list-pariwisata'); ?>">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <center>
+                            <div class="icon"><i class="bx bx-world"></i></div>
+                        </center>
+                        <center>
+                            <h4 class="description">Pariwisata</h4>
+                            <p class="description">Kami menyediakan informasi tentang tempat pariwisata yang mungkin anda sukai dan ingin kunjungi</p>
+                        </center>
+                    </div>
+                </a>
             </div>
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="icon-box">
-                    <center>
-                        <div class="icon"><i class="bx bx-buildings"></i></div>
-                    </center>
-                    <center>
-                        <h4 class="description">Hotel</h4>
-                        <p class="description">Kami menyediakan informasi tentang hotel dan tempat tinggal yang bisa anda tempati ketika perjalanan</p>
-                    </center>
-                </div>
+                <a href="<?php echo base_url('list-travel'); ?>">
+                    <div class="icon-box">
+                        <center>
+                            <div class="icon"><i class="bx bx-buildings"></i></div>
+                        </center>
+                        <center>
+                            <h4 class="description">Travel</h4>
+                            <p class="description">Kami menyediakan informasi tentang travel yang dapat membantu anda untuk masalah transportasi</p>
+                        </center>
+                    </div>
+                </a>
             </div>
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="icon-box">
-                    <center>
-                        <div class="icon"><i class="bx bx-gift"></i></div>
-                    </center>
-                    <center>
-                        <h4 class="description">Oleh-oleh</h4>
-                        <p class="description">Kami menyediakan informasi tentang oleh-oleh yang sesuai dengan anda dan juga khas Tapanuli Utara</p>
-                    </center>
-                </div>
+                <a href="<?php echo base_url('list-oleh-oleh'); ?>">
+                    <div class="icon-box">
+                        <center>
+                            <div class="icon"><i class="bx bx-gift"></i></div>
+                        </center>
+                        <center>
+                            <h4 class="description">Oleh-oleh</h4>
+                            <p class="description">Kami menyediakan informasi tentang oleh-oleh yang sesuai dengan anda dan juga khas Tapanuli Utara</p>
+                        </center>
+                    </div>
+                </a>
             </div>
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="icon-box">
-                    <center>
-                        <div class="icon"><i class="bx bx-dish"></i></div>
-                    </center>
-                    <center>
-                        <h4 class="description">Kuliner</h4>
-                        <p class="description">Kami menyediakan informasi tentang berbagai macam kuliner khas Tapanuli Utara yang menarik untuk anda nikmati</p>
-                    </center>
-                </div>
+                <a href="<?php echo base_url('list-kuliner'); ?>">
+                    <div class="icon-box">
+                        <center>
+                            <div class="icon"><i class="bx bx-dish"></i></div>
+                        </center>
+                        <center>
+                            <h4 class="description">Kuliner</h4>
+                            <p class="description">Kami menyediakan informasi tentang berbagai macam kuliner khas Tapanuli Utara yang menarik untuk anda nikmati</p>
+                        </center>
+                    </div>
+                </a>
             </div>
         </div>
     </section><!-- End Services Section -->
@@ -95,7 +103,6 @@
 
             <div class="text-center title">
                 <h3 class="warna-text-hitung">What we have achieved so far</h3>
-                <p>Iusto et labore modi qui sapiente xpedita tempora et aut non ipsum consequatur illo.</p>
             </div>
 
             <center>

@@ -17,7 +17,8 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <!-- <div class="wrapper">
+
         <div class="side-menu">
             <div class="logo">
                 Hi, Admin!
@@ -38,7 +39,12 @@
 
             </div>
         </div>
-    </div>
+    </div> -->z
+
+    <nav>
+
+
+    </nav>
 </body>
 
 </html>

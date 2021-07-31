@@ -32,7 +32,7 @@
 <body>
 
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top ">
+    <header id="header" class="position-relative">
         <div class="container-fluid">
 
             <div class="row justify-content-center">

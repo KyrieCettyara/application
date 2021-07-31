@@ -66,8 +66,13 @@
                         <a href="<?= base_url('login') ?>" class="get-started-btn">Login</a>
                     <?php endif ?>
 
+
+
                 </div>
+
+
                 <div class="Hotbg">
+
                     <input onchange="ganti()" id="search" type="text" name="input" class="Hotbg-txt" placeholder="Search >>>">
                     <a id="searchb" href="" class="Hotbg-btn">
                         <i class="fa fa-search"></i>
