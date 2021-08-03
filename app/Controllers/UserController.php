@@ -11,17 +11,21 @@ class UserController extends BaseController
 {
     public function __construct()
     {
-        if (session()->get('role_id') != 2) {
-            $session = session()->get('role_id');
-            echo $session;
-            exit;
-        }
+        // if (session()->get('role_id') != 2) {
+        //     $session = session()->get('role_id');
+        //     echo $session;
+        //     exit;
+        // }
 
         helper('text');
     }
     public function index()
     {
-        return view('Home/index');
+        if (session()->get('role_id') == 2) {
+            return view('Home/index');
+        } else {
+            return view('admin');
+        }
     }
 
     public function bookmark()

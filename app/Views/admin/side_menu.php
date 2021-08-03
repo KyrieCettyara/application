@@ -1,4 +1,6 @@
 <head>
+    <title>Sistem Informasi Pariwasata Tapanuli Utara</title>
+    <link rel="icon" href="<?php echo base_url('img/icon.png'); ?>" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -20,7 +22,9 @@
 
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Halo, Admin!</h3>
+                <a href="<?php echo base_url('admin'); ?>">
+                    <h3>Halo, Admin!</h3>
+                </a>
             </div>
 
             <ul class="list-unstyled components">
@@ -29,18 +33,21 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Artikel</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="<?= base_url('admin') ?>"> Pariwisata</a>
+                            <a href="<?php echo base_url('pariwisata'); ?>"> Pariwisata</a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="<?php echo base_url('kuliner'); ?>">Kuliner</a>
                         </li>
                         <li>
-                            <a href="#">Home 3</a>
+                            <a href="<?php echo base_url('travel'); ?>">Travel </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url('oleh-oleh'); ?>">Oleh-Oleh</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="<?= base_url('AuthController/logout') ?>"></i>Keluar</a>
+                    <a href="<?= base_url('logout') ?>"></i>Keluar</a>
                 </li>
 
 
@@ -53,6 +60,7 @@
                         <i class="fas fa-align-left"></i>
                         <span>Menu</span>
                     </button>
+                    <h3><?= $title['title']; ?></h3>
 
                 </div>
             </nav>
@@ -69,6 +77,8 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.tiny.cloud/1/me1bxpg63nn92ka4irr95nwsy1uckb573bfc9z48waosdkia/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('#sidebarCollapse').on('click', function() {
@@ -76,4 +86,16 @@
             });
         });
     </script>
+
+    <script src=" <?= base_url('ckeditor5/ckeditor.js') ?> "></script>
+    <script>
+        ClassicEditor.create(document.querySelector('#isi_artikel'), {
+
+        }).then(editor => {
+            console.log(editor);
+        }).catch(error => {
+            console.log(error)
+        });
+    </script>
+
 </body>

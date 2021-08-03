@@ -6,8 +6,6 @@
     <div class="row">
         <div class="col">
             <div class="panel-body">
-                <h1>Edit Artikel</h1>
-
                 <hr>
                 <form class="" enctype="multipart/form-data" action="<?= base_url('ArtikelController/editArtikel/' . $modelId['id_artikel']); ?>" method="post">
                     <div class="form-group">
@@ -45,5 +43,6 @@
         </div>
     </div>
 </div>
+
 
 <?= $this->endSection(); ?>

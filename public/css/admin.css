@@ -179,6 +179,7 @@ a.article:hover {
 .row > .col {
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
 .row > .col > .detail {

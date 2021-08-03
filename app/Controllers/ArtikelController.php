@@ -70,6 +70,7 @@ class ArtikelController extends BaseController
     public function artikelById($key = null)
     {
         $data['title'] = 'Sistem Informasi Tapanuli Utara';
+        $title['title'] = 'Sistem Informasi Tapanuli Utara';
         $artikelModel = new ArtikelModel();
 
         $value = $artikelModel->where('id_artikel', $key)->first();
@@ -78,6 +79,7 @@ class ArtikelController extends BaseController
 
             return view('admin/detail', [
                 "value" => $value,
+                "title" => $title,
             ]);
         } else {
 
@@ -147,6 +149,7 @@ class ArtikelController extends BaseController
     public function addArtikel()
     {
         $data['title'] = 'Tambah Artikel';
+        $title['title'] = "Tambah Artikel";
         $model = new JenisArtikelModel();
 
         $data = $model->findAll();
@@ -180,12 +183,14 @@ class ArtikelController extends BaseController
 
         return view('admin/add_artikel', [
             "data" => $data,
+            "title" => $title,
         ]);
     }
 
     public function editArtikel($id = null)
     {
         $data['title'] = 'Tambah Artikel';
+        $title['title'] = 'Sistem Informasi Tapanuli Utara';
         $model = new JenisArtikelModel();
         $modelArtikel = new ArtikelModel();
 
@@ -217,13 +222,14 @@ class ArtikelController extends BaseController
 
             $session = session();
             $session->setFlashdata("success", "Data updated successfully");
-            return redirect()->to(base_url('admin'));
+            return redirect()->back();
         }
 
 
         return view('admin/edit_artikel', [
             "modelId" => $modelId,
             "data" => $data,
+            "title" => $title,
         ]);
     }
 

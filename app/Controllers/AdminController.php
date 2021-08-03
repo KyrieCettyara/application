@@ -22,52 +22,66 @@ class AdminController extends BaseController
     {
         $model = new ArtikelModel();
         $data['title'] = 'Admin';
+        $title['title'] = "List Semua Artikel";
 
         $data = $model->findAll();
 
         return view('admin/list', [
             "data" => $data,
+            "title" => $title,
         ]);
     }
 
 
-    public function addAdminAcc()
+    public function listKuliner()
     {
-        $data['title'] = 'Tambah Artikel';
+        $title['title'] = "List Kuliner";
+        $kulinerModel = new ArtikelModel();
 
+        $data = $kulinerModel->where('id_jenis_artikel', 1)->findAll();
 
+        return view('admin/list', [
+            "data" => $data,
+            "title" => $title,
+        ]);
+    }
 
-        if ($this->request->getMethod() == 'post') {
-            //let's do the validation here
-            $rules = [
-                'name' => 'required|min_length[3]|max_length[20]',
-                'email' => 'required|min_length[6]|max_length[50]|valid_email|is_unique[user.email]',
-                'password' => 'required|min_length[8]|max_length[255]',
-                'password_confirm' => 'matches[password]',
-            ];
+    public function listPariwisata()
+    {
+        $title['title'] = "List Pariwisata";
+        $kulinerModel = new ArtikelModel();
 
-            if (!$this->validate($rules)) {
+        $data = $kulinerModel->where('id_jenis_artikel', 3)->findAll();
 
-                return view('auth/register', [
-                    "validation" => $this->validator,
-                ]);
-            } else {
-                $model = new UserModel();
+        return view('admin/list', [
+            "data" => $data,
+            "title" => $title,
+        ]);
+    }
 
-                $newData = [
-                    'name' => $this->request->getVar('name'),
-                    'email' => $this->request->getVar('email'),
-                    'password' => $this->request->getVar('password'),
-                    'role_id' => 1,
-                    'is_active' => 1,
-                    'date_created' => time()
-                ];
-                $model->save($newData);
-                $session = session();
-                $session->setFlashdata('success', 'Successful Registration');
-                return redirect()->to(base_url('admin'));
-            }
-        }
-        return view('add_artikel', $data);
+    public function listTravel()
+    {
+        $title['title'] = "List Travel";
+        $kulinerModel = new ArtikelModel();
+
+        $data = $kulinerModel->where('id_jenis_artikel', 2)->findAll();
+
+        return view('admin/list', [
+            "title" => $title,
+            "data" => $data,
+        ]);
+    }
+
+    public function listOleh()
+    {
+        $title['title'] = "List Oleh-Oleh";
+        $kulinerModel = new ArtikelModel();
+
+        $data = $kulinerModel->where('id_jenis_artikel', 4)->findAll();
+
+        return view('admin/list', [
+            "title" => $title,
+            "data" => $data,
+        ]);
     }
 }

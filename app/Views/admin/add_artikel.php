@@ -6,7 +6,6 @@
     <div class="row">
         <div class="col">
             <div class="panel-body">
-                <h1>Tambah Artikel</h1>
                 <hr>
                 <form class="" enctype="multipart/form-data" action="<?= base_url('ArtikelController/addArtikel'); ?>" method="post">
                     <div class="form-group row">

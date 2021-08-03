@@ -14,9 +14,15 @@ class Home extends BaseController
 	public function index()
 	{
 		$data['title'] = 'Sistem Informasi Tapanuli Utara';
-		return view('landing_page', [
-			"data" => $data
-		]);
+
+		if (session()->get('role_id') != 1) {
+			return view('landing_page', [
+				"data" => $data
+			]);
+		} else {
+
+			return redirect()->to(base_url('admin'));
+		}
 	}
 
 	public function search()

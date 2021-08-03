@@ -6,7 +6,7 @@
     <?php foreach ($allValue as $value) : ?>
         <?php
         $isi_artikel = $value['isi_artikel'];
-        $isi_artikel = character_limiter($isi_artikel, 500);
+        $isi_artikel = character_limiter($isi_artikel, 300);
         ?>
         <div class="container">
             <div class="row">

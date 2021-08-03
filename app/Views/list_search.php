@@ -80,12 +80,19 @@
 
             </div>
     </header><!-- End Header -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5>Hasil Pencarian </h5>
+            </div>
+        </div>
+    </div>
 
     <?php $no = 1 + (10 * ($page - 1));
     foreach ($artikel as $row) : ?>
         <?php
         $isi_artikel = $row['isi_artikel'];
-        $isi_artikel = character_limiter($isi_artikel, 500);
+        $isi_artikel = character_limiter($isi_artikel, 300);
         ?>
         <div class="container">
             <div class="row">

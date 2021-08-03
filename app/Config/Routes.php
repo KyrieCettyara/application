@@ -46,7 +46,8 @@ $routes->group("user", ["filter" => "auth"], function ($routes) {
 });
 
 $routes->get('logout', ' UserController::logout');
-
+$routes->match(["get", "post"], "register", "AuthController::register");
+$routes->match(["get", "post"], "login", "AuthController::login");
 $routes->get('bookmark', "UserController::listBookmark");
 $routes->get('tambah-bookmark', "ArtikelController::bookmark");
 $routes->get('list-kuliner', "ArtikelController::listKuliner");
@@ -59,6 +60,11 @@ $routes->match(["get", "post"], "add-artikel", "ArtikelController::addArtikel");
 $routes->match(["get", "post"], "edit-artikel/(:num)", "ArtikelController::editArtikel/$1");
 $routes->get("delete-artikel/(:num)", "ArtikelController::deleteArtikel/$1");
 $routes->get("delete-bookmark/(:num)", "UserController::deleteBookmark/$1");
+$routes->get('kuliner', "AdminController::listKuliner");
+$routes->get('pariwisata', "AdminController::listPariwisata");
+$routes->get('travel', "AdminController::listTravel");
+$routes->get('oleh-oleh', "AdminController::listOleh");
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

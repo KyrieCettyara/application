@@ -13,6 +13,7 @@
 
 
     <!-- Favicons -->
+    <link rel="icon" href="<?php echo base_url('img/icon.png'); ?>" type="image/x-icon">
     <link href=" <?php echo base_url('img/icon.png'); ?> " rel="icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
